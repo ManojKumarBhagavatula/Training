@@ -3,7 +3,6 @@ package day2_DSA;
 class Node{
     int data;
     Node next;
-
     public Node(int data){
         this.data = data;
     }
@@ -17,7 +16,7 @@ public class LinkedList {
         Node temp = head;
         Node newNode = new Node(data);
         if(head == null){
-            head = newNode;                       
+            head = newNode;                 
         }else{
             while(temp.next != null){
                 temp = temp.next;
@@ -36,6 +35,7 @@ public class LinkedList {
             head = newNode;
         }count++;
     }
+
 
     public void insertMiddle(int data, int position) {
         Node curr = head;
@@ -95,8 +95,7 @@ public class LinkedList {
                 c++;
             }
             curr.next = curr.next.next;
-        }
-    
+        }    
         count--;
     }
     
@@ -179,10 +178,14 @@ public class LinkedList {
         list.insert(30);
         list.insert(20);
         list.insert(10);
-        list.displayElements();
+        list.insertBeginning(45);
+        list.insertMiddle(63,3);
+        list.pop();
+        list.pop(3);
+        list.deleteBeginning();
         list.sort();
         list.displayElements();
-        System.out.println(list.count);
+        System.out.println("count of the elements in the list : "+list.count);
         
     }
     
