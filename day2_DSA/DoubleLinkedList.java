@@ -84,6 +84,7 @@ public class DoubleLinkedList {
     public void pop(int position){
         if(position < 1 || position > size){
             System.out.println("Enter correct position");
+            return;
         }
         
         else if(position == size)pop();
@@ -96,6 +97,7 @@ public class DoubleLinkedList {
             temp.next.prev = temp.prev;
             temp.prev.next = temp.next;
         }
+        size--;
 
     }
     public void reverse(){
@@ -108,6 +110,17 @@ public class DoubleLinkedList {
         head = last;
         last = temp;
         flip = true;
+    }
+    public void search(int node){
+        Node temp = head;
+        while(temp!=null){
+            if(temp.data == node){
+                System.out.println("Node found at position ");
+                return;
+            }
+            temp = temp.next;
+        }
+        System.out.println("Node not found");
     }
     public void displayElements(){
         Node temp = head;
