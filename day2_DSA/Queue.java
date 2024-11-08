@@ -1,12 +1,6 @@
 package day2_DSA;
 
-class Node {
-    int data;
-    Node next;
-    Node(int data){
-        this.data = data;
-    }
-}
+
 public class Queue {
     Node front;
     Node rear;

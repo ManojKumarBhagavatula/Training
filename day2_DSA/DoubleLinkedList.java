@@ -1,13 +1,6 @@
 package day2_DSA;
 
-class Node {
-    int data;
-    Node prev;
-    Node next;
-    Node(int data) {
-        this.data = data;
-    }
-}
+
 public class DoubleLinkedList {
     Node head;
     Node last = head;
@@ -111,17 +104,21 @@ public class DoubleLinkedList {
         last = temp;
         flip = true;
     }
-    public void search(int node){
+    public int search(int node) {
         Node temp = head;
-        while(temp!=null){
-            if(temp.data == node){
-                System.out.println("Node found at position ");
-                return;
+        int position = 1; // to keep track of the position
+        while (temp != null) {
+            if (temp.data == node) {
+                System.out.println("found at position: " + position);
+                return position;
             }
             temp = temp.next;
+            position++;
         }
         System.out.println("Node not found");
+        return -1;
     }
+    
     public void displayElements(){
         Node temp = head;
         if(flip == true){
@@ -149,5 +146,6 @@ public class DoubleLinkedList {
         dl.displayElements();
         dl.pop(3);
         dl.displayElements();
+        dl.search(4);
     }
 }
