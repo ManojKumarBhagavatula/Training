@@ -1,12 +1,6 @@
 package day2_DSA;
 
-class Node{
-    int data;
-    Node next;
-    public Node(int data){
-        this.data = data;
-    }
-}
+
 
 public class LinkedList {
     Node head;
