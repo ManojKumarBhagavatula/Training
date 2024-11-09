@@ -179,6 +179,7 @@ public class LinkedList {
         list.deleteBeginning();
         list.sort();
         list.displayElements();
+        list.displayReverse();
         System.out.println("count of the elements in the list : "+list.count);
         
     }
