@@ -151,6 +151,16 @@ public class LinkedList {
         }
     }
     
+    public boolean search(int data) {
+        Node temp = head;
+        while (temp != null) {
+            if (temp.data == data) {
+                return true;
+            }
+            temp = temp.next;
+        }
+        return false;
+    }
 
     public void replace(int val1, int pos1, int val2, int pos2){
         Node temp = head;
@@ -180,6 +190,7 @@ public class LinkedList {
         list.sort();
         list.displayElements();
         System.out.println("count of the elements in the list : "+list.count);
+        System.out.println(list.search(40));
         
     }
     
