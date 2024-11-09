@@ -6,7 +6,6 @@ public class CircularDoubleList {
     Node head;
     Node last;
     int size = 0;
-    boolean flip = false;
    
     public void add(int data) {
         size++;
