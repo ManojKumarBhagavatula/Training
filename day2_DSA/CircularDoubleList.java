@@ -6,6 +6,7 @@ public class CircularDoubleList {
     Node head;
     Node last;
     int size = 0;
+    boolean flip = false;
    
     public void add(int data) {
         size++;
@@ -107,6 +108,17 @@ public class CircularDoubleList {
         temp.next.prev = temp.prev;
         size--;
     }
+    public void reverse(){
+        Node temp = head;
+            while(temp != null){
+                System.out.print(temp.prev.data+" -> ");
+                temp = temp.prev;
+                if(temp == head){
+                    break;                   
+                }           
+            }
+            System.out.println(head.prev.data);
+    }
 
     public void displayElements() {
         if (head == null) {
@@ -135,8 +147,8 @@ public class CircularDoubleList {
         cdl.displayElements();
         cdl.add(10,2);
         cdl.displayElements();
-        cdl.pop(3);
-        cdl.displayElements();
+        cdl.reverse();
+       
       
     }
 }
